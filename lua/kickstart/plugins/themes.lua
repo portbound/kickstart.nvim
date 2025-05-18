@@ -18,7 +18,7 @@ return {
 					style = {},
 				},
 			})
-			--vim.cmd.colorscheme 'vague'
+			--vim.cmd.colorscheme("vague")
 		end,
 	},
 	{
@@ -72,7 +72,53 @@ return {
 	{
 		"savq/melange-nvim",
 		config = function()
-			vim.cmd.colorscheme("melange")
+			--vim.cmd.colorscheme("melange")
+		end,
+	},
+	{
+		"zenbones-theme/zenbones.nvim",
+		-- Optionally install Lush. Allows for more configuration or extending the colorscheme
+		-- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+		-- In Vim, compat mode is turned on as Lush only works in Neovim.
+		dependencies = "rktjmp/lush.nvim",
+		lazy = false,
+		priority = 1000,
+		-- you can set set configuration options here
+		config = function()
+			vim.g.zenbones_darken_comments = 45
+			--vim.cmd.colorscheme("zenbones")
+		end,
+	},
+	{
+		"rjshkhr/shadow.nvim",
+		priority = 1000,
+		config = function()
+			vim.opt.termguicolors = true
+			--vim.cmd.colorscheme("shadow")
+		end,
+	},
+	{
+		"anAcc22/sakura.nvim",
+		dependencies = "rktjmp/lush.nvim",
+		config = function()
+			transparent = true
+			vim.opt.background = "dark" -- or "light"
+			vim.cmd("colorscheme sakura") -- sets the colorscheme
+			-- Force transparency
+			local groups = {
+				"Normal",
+				"NormalNC",
+				"NormalFloat",
+				"FloatBorder",
+				"SignColumn",
+				"VertSplit",
+				"StatusLine",
+				"TabLineFill",
+			}
+
+			for _, group in ipairs(groups) do
+				vim.api.nvim_set_hl(0, group, { bg = "none" })
+			end
 		end,
 	},
 }
