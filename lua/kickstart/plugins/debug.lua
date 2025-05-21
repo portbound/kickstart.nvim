@@ -38,14 +38,14 @@ return {
 			function()
 				require("dap").step_over()
 			end,
-			desc = "Debug: Step Into",
+			desc = "Debug: Step Over",
 		},
 		{
-			"<F1>",
+			"<F11>",
 			function()
 				require("dap").step_into()
 			end,
-			desc = "Debug: Step Over",
+			desc = "Debug: Step Into",
 		},
 		{
 			"<F12>",
@@ -91,7 +91,7 @@ return {
 		require("mason-nvim-dap").setup({
 			-- Makes a best effort to setup the various debuggers with
 			-- reasonable debug configurations
-			automatic_installation = true,
+			automatic_installation = false,
 
 			-- You can provide additional configuration to the handlers,
 			-- see mason-nvim-dap README for more information
@@ -163,5 +163,29 @@ return {
 				detached = vim.fn.has("win32") == 0,
 			},
 		})
+
+		-- Override dap configs in picker
+		dap.configurations.go = {
+			{
+				type = "go",
+				name = "Delve: Debug", -- run current file
+				request = "launch",
+				program = "${file}",
+			},
+			{
+				type = "go",
+				name = "Delve: Debug Package", -- run entire directory (like go run .)
+				request = "launch",
+				program = "${fileDirname}",
+			},
+			{
+				type = "go",
+				name = "Delve: Attach", -- attach to a running process
+				request = "attach",
+				processId = require("dap.utils").pick_process,
+				-- Optionally, restrict to a specific mode or port:
+				-- port = 38697,
+			},
+		}
 	end,
 }
