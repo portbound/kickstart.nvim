@@ -9,6 +9,7 @@ return {
 	{ import = "custom.plugins.remote.oil-nvim" },
 	{ import = "custom.plugins.remote.trouble-nvim" },
 	{ import = "custom.plugins.remote.recall-nvim" },
+	{ import = "custom.plugins.remote.hardtimes-nvim" },
 
 	{ import = "custom.plugins.local.floaterminal" },
 	{ import = "custom.plugins.local.toggle_comments" },
