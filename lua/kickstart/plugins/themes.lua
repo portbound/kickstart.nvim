@@ -4,7 +4,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("tokyonight").setup({})
-			--vim.cmd.colorscheme 'tokyonight'
+			--vim.cmd.colorscheme("tokyonight")
 		end,
 	},
 	{
@@ -18,7 +18,7 @@ return {
 					style = {},
 				},
 			})
-			--vim.cmd.colorscheme("vague")
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 	{
@@ -103,7 +103,7 @@ return {
 		config = function()
 			transparent = true
 			vim.opt.background = "dark" -- or "light"
-			vim.cmd("colorscheme sakura") -- sets the colorscheme
+			--vim.cmd("colorscheme sakura") -- sets the colorscheme
 			-- Force transparency
 			local groups = {
 				"Normal",
@@ -115,10 +115,33 @@ return {
 				"StatusLine",
 				"TabLineFill",
 			}
-
 			for _, group in ipairs(groups) do
 				vim.api.nvim_set_hl(0, group, { bg = "none" })
 			end
+		end,
+	},
+	{
+		"aktersnurra/no-clown-fiesta.nvim",
+		config = function()
+			transparent = true
+			--vim.cmd.colorscheme("no-clown-fiesta")
+		end,
+	},
+	{
+		"kimjbaran/voyager.nvim",
+		config = function()
+			--vim.cmd.colorscheme("voyager")
+		end,
+	},
+	{
+		"cdmill/neomodern.nvim",
+		config = function()
+			require("neomodern").setup({
+				theme = "hojicha",
+				transparent = true,
+			})
+			--vim.cmd.colorscheme("hojicha")
+			--require("neomodern").load()
 		end,
 	},
 }
