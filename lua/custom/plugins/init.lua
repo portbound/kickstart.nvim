@@ -10,6 +10,7 @@ return {
 	{ import = "custom.plugins.remote.trouble-nvim" },
 	{ import = "custom.plugins.remote.recall-nvim" },
 	{ import = "custom.plugins.remote.hardtimes-nvim" },
+	{ import = "custom.plugins.remote.yazi-nvim" },
 	{ import = "custom.plugins.remote.snacks-nvim" },
 
 	{ import = "custom.plugins.local.floaterminal" },
