@@ -5,6 +5,7 @@ return {
 		local recall = require("recall")
 
 		recall.setup({
+			sign = "",
 			sign_highlight = "@comment.note",
 			telescope = {
 				mappings = {
