@@ -1,13 +1,5 @@
 return {
 	{
-		"folke/tokyonight.nvim",
-		priority = 1000,
-		config = function()
-			require("tokyonight").setup({})
-			--vim.cmd.colorscheme("tokyonight")
-		end,
-	},
-	{
 		"vague2k/vague.nvim",
 		priority = 1000,
 		config = function()
@@ -18,30 +10,7 @@ return {
 					style = {},
 				},
 			})
-			vim.cmd.colorscheme("vague")
-		end,
-	},
-	{
-		"rose-pine/neovim",
-		priority = 1000,
-		config = function()
-			require("rose-pine").setup({
-				transparent = true,
-				style = {
-					style = {},
-				},
-			})
-			--vim.cmd 'colorscheme rose-pine'
-		end,
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		config = function()
-			require("kanagawa").setup({
-				--transparent = true,
-			})
-			--vim.cmd 'colorscheme kanagawa-paper-ink'
+			--vim.cmd.colorscheme("vague")
 		end,
 	},
 	{
@@ -49,17 +18,9 @@ return {
 		priority = 1000,
 		config = function()
 			require("kanagawa-paper").setup({
-				--transparent = true,
+				transparent = true,
 			})
-			--vim.cmd 'colorscheme kanagawa-paper-ink'
-		end,
-	},
-	{
-		"catppuccin/nvim",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({})
-			--vim.cmd 'colorscheme catppuccin'
+			--vim.cmd("colorscheme kanagawa-paper-ink")
 		end,
 	},
 	{
@@ -85,7 +46,7 @@ return {
 		priority = 1000,
 		-- you can set set configuration options here
 		config = function()
-			vim.g.zenbones_darken_comments = 45
+			--vim.g.zenbones_darken_comments = 45
 			--vim.cmd.colorscheme("zenbones")
 		end,
 	},
@@ -94,7 +55,7 @@ return {
 		priority = 1000,
 		config = function()
 			vim.opt.termguicolors = true
-			--vim.cmd.colorscheme("shadow")
+			vim.cmd.colorscheme("shadow")
 		end,
 	},
 	{
@@ -121,19 +82,6 @@ return {
 		end,
 	},
 	{
-		"aktersnurra/no-clown-fiesta.nvim",
-		config = function()
-			transparent = true
-			--vim.cmd.colorscheme("no-clown-fiesta")
-		end,
-	},
-	{
-		"kimjbaran/voyager.nvim",
-		config = function()
-			--vim.cmd.colorscheme("voyager")
-		end,
-	},
-	{
 		"cdmill/neomodern.nvim",
 		config = function()
 			require("neomodern").setup({
@@ -141,7 +89,26 @@ return {
 				transparent = true,
 			})
 			--vim.cmd.colorscheme("hojicha")
-			--require("neomodern").load()
+		end,
+	},
+	{
+		"Koalhack/darcubox-nvim",
+		config = function()
+			require("darcubox").setup({
+				options = {
+					transparent = true,
+					styles = {
+						comments = { italic = true }, -- italic
+						functions = { bold = true }, -- bold
+						keywords = { italic = true },
+						types = { italic = true, bold = true }, -- italics and bold
+					},
+				},
+			})
+
+			-- Set the configuration before loading the color scheme
+
+			--vim.cmd("colorscheme darcubox")
 		end,
 	},
 }

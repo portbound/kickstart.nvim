@@ -4,14 +4,14 @@
 -- See the kickstart.nvim README for more information
 
 return {
-	{ import = "custom.plugins.remote.smear_cursor" },
-	--	{ import = "custom.plugins.remote.startup-nvim" },
+	{ import = "custom.plugins.remote.smear-nvim" },
 	{ import = "custom.plugins.remote.oil-nvim" },
 	{ import = "custom.plugins.remote.trouble-nvim" },
 	{ import = "custom.plugins.remote.recall-nvim" },
 	{ import = "custom.plugins.remote.hardtimes-nvim" },
 	{ import = "custom.plugins.remote.yazi-nvim" },
 	{ import = "custom.plugins.remote.snacks-nvim" },
+	{ import = "custom.plugins.remote.typr-nvim" },
 
 	{ import = "custom.plugins.local.floaterminal" },
 	{ import = "custom.plugins.local.toggle_comments" },
