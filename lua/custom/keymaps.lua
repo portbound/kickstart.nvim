@@ -53,5 +53,10 @@ vim.keymap.set("n", "<leader>tcv", function()
 	vim.cmd("startinsert")
 end, { desc = "[T]erminal [C]ht.sh/[V]im" })
 
+-- Go Home
+vim.keymap.set("n", "<leader>h", function()
+	Snacks.dashboard()
+end, { desc = "Open Dashboard" })
+
 -- Oil in float
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
