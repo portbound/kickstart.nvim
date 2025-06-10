@@ -10,7 +10,7 @@ return {
 					style = {},
 				},
 			})
-			--vim.cmd.colorscheme("vague")
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 	{
@@ -55,7 +55,7 @@ return {
 		priority = 1000,
 		config = function()
 			vim.opt.termguicolors = true
-			vim.cmd.colorscheme("shadow")
+			--vim.cmd.colorscheme("shadow")
 		end,
 	},
 	{
