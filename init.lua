@@ -278,7 +278,6 @@ require("lazy").setup({
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
-		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -489,6 +488,7 @@ require("lazy").setup({
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
 					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+					map("gt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
