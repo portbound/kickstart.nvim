@@ -16,7 +16,7 @@ vim.api.nvim_set_keymap(
 -- Open Mini Terminal
 vim.keymap.set("n", "<leader>tm", function()
 	vim.cmd.vnew()
-	vim.cmd.term("fish")
+	vim.cmd.term("zsh")
 	vim.cmd.wincmd("J")
 	vim.cmd("startinsert")
 	vim.api.nvim_win_set_height(0, 10)
@@ -57,6 +57,3 @@ end, { desc = "[T]erminal [C]ht.sh/[V]im" })
 vim.keymap.set("n", "<leader>h", function()
 	Snacks.dashboard()
 end, { desc = "Open Dashboard" })
-
--- Oil in float
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
