@@ -11,6 +11,7 @@ return {
 	{ import = "custom.plugins.remote.snacks-nvim" },
 	{ import = "custom.plugins.remote.typr-nvim" },
 	{ import = "custom.plugins.remote.treesitter-context-nvim" },
+	{ import = "custom.plugins.remote.goplements-nvim" },
 
 	{ import = "custom.plugins.local.floaterminal" },
 	{ import = "custom.plugins.local.toggle_comments" },
