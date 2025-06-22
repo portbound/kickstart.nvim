@@ -180,6 +180,30 @@ return {
 			},
 			{
 				type = "go",
+				name = "Delve: Debug Test",
+				request = "launch",
+				mode = "test",
+				program = "${fileDirname}",
+			},
+			{
+				type = "go",
+				name = "Delve: Debug Subtest",
+				request = "launch",
+				mode = "test",
+				program = "${fileDirname}",
+				args = function()
+					return vim.split(vim.fn.input("Test args: "), " ")
+				end,
+			},
+			{
+				type = "go",
+				name = "Delve: Debug All Tests (Module)",
+				request = "launch",
+				mode = "test",
+				program = "${workspaceFolder}", -- 🧠 must be root of the module (where go.mod lives)
+			},
+			{
+				type = "go",
 				name = "Delve: Attach", -- attach to a running process
 				request = "attach",
 				processId = require("dap.utils").pick_process,
