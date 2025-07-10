@@ -186,6 +186,7 @@ return {
 				program = "${fileDirname}",
 			},
 			{
+				-- format as -test.run TestHeadersParse/Empty_input
 				type = "go",
 				name = "Delve: Debug Subtest",
 				request = "launch",
