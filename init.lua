@@ -329,6 +329,11 @@ require("lazy").setup({
 					--   mappings = {
 					--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
 					--   },
+					mappings = {
+						n = {
+							["<c-d>"] = require("telescope.actions").delete_buffer,
+						}, -- n
+					},
 				},
 				pickers = {
 					find_files = {
