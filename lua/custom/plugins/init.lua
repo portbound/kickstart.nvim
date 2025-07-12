@@ -4,16 +4,11 @@
 -- See the kickstart.nvim README for more information
 
 return {
-	{ import = "custom.plugins.remote.smear-nvim" },
-	{ import = "custom.plugins.remote.oil-nvim" },
-	{ import = "custom.plugins.remote.trouble-nvim" },
-	{ import = "custom.plugins.remote.hardtimes-nvim" },
-	{ import = "custom.plugins.remote.snacks-nvim" },
-	{ import = "custom.plugins.remote.typr-nvim" },
-	{ import = "custom.plugins.remote.treesitter-context-nvim" },
-	{ import = "custom.plugins.remote.goplements-nvim" },
-	{ import = "custom.plugins.remote.noice-nvim" },
-
-	{ import = "custom.plugins.local.floaterminal" },
-	{ import = "custom.plugins.local.toggle_comments" },
+	{ import = "custom.plugins.smear-nvim" },
+	{ import = "custom.plugins.oil-nvim" },
+	{ import = "custom.plugins.hardtimes-nvim" },
+	{ import = "custom.plugins.snacks-nvim" },
+	{ import = "custom.plugins.treesitter-context-nvim" },
+	{ import = "custom.plugins.goplements-nvim" },
+	{ import = "custom.plugins.noice-nvim" },
 }
